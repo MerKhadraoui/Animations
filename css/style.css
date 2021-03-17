@@ -149,11 +149,6 @@ body {
   flex-direction: column;
   position: relative;
 }
-.line {
-  width: 3rem;
-  height: 0.5rem;
-  background-color: gray;
-  border-radius: 25%;
 }
 .x-menu1:hover .first {
   height: 2rem;
@@ -168,5 +163,34 @@ body {
   position: absolute;
 }
 .x-menu1:hover .sec {
+  display: none;
+}
+
+.x-menu2 {
+  background-color: silver;
+  width: 4rem;
+  height: 3.5rem;
+  border-radius: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  position: relative;
+}
+
+}
+.x-menu2:hover .first {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 100%;
+  box-shadow: 3px 3px rgba(92, 122, 156, 0.418),
+    -1em 0 0.4em rgba(75, 102, 122, 0.466);
+  position: absolute;
+}
+.x-menu2:hover .thr {
+  transform: rotate(-0.15turn);
+  position: absolute;
+}
+.x-menu2:hover .sec {
   display: none;
 }
