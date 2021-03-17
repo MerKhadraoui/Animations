@@ -19,8 +19,9 @@ body {
 }
 .box {
   display: flex;
-  width: 5rem;
-  height: 4rem;
+  justify-content: center;
+  width: 6rem;
+  height: 5rem;
   font-size: 1rem;
   align-items: center;
   color: var(--box-color);
@@ -91,26 +92,11 @@ body {
     letter-spacing: 0.2.8rem;
   }
 }
-/* .box-up {
-  width: var(--box-width);
-  height: 2rem;
-  border: 2px red solid;
-  position: relative;
-  border-radius: 60%;
-  animation-name: up;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-play-state: running;
-}
-@keyframes up {
-  from {
-    right: 400px;
-  }
-  to {
-    right: 0;
-  }
-} */
-.x-menu {
+
+.x-menu,
+.x-menu1,
+.x-menu2,
+.x-menu3 {
   background-color: silver;
   width: 4rem;
   height: 3.5rem;
@@ -124,7 +110,7 @@ body {
   width: 3rem;
   height: 0.5rem;
   background-color: gray;
-  border-radius: 25%;
+  border-radius: 30%;
 }
 .x-menu:hover .first {
   transform: rotate(0.15turn);
@@ -138,18 +124,6 @@ body {
   display: none;
 }
 
-.x-menu1 {
-  background-color: silver;
-  width: 4rem;
-  height: 3.5rem;
-  border-radius: 30%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
-  position: relative;
-}
-}
 .x-menu1:hover .first {
   height: 2rem;
   width: 2rem;
@@ -166,31 +140,49 @@ body {
   display: none;
 }
 
-.x-menu2 {
-  background-color: silver;
-  width: 4rem;
-  height: 3.5rem;
-  border-radius: 30%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
-  position: relative;
-}
-
+.x-menu2:hover .line {
+  width: 1rem;
+  background-color: rgb(82, 82, 82);
 }
 .x-menu2:hover .first {
+  border: 2px rgb(223, 197, 83) solid;
+  background-color: rgba(54, 155, 158, 0.582);
+  position: relative;
   height: 2rem;
-  width: 2rem;
-  border-radius: 100%;
-  box-shadow: 3px 3px rgba(92, 122, 156, 0.418),
-    -1em 0 0.4em rgba(75, 102, 122, 0.466);
-  position: absolute;
+  width: 1.5rem;
+  border-radius: 60%;
+  animation-name: menu2;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
 }
-.x-menu2:hover .thr {
-  transform: rotate(-0.15turn);
-  position: absolute;
+
+@keyframes menu2 {
+  from {
+    background-color: rgba(54, 155, 158, 0.582);
+  }
+  to {
+    background-color: rgba(236, 181, 28, 0.795);
+    box-shadow: 3px 3px rgb(128, 133, 123), -1em 0 0.4em rgb(223, 223, 173);
+  }
 }
-.x-menu2:hover .sec {
-  display: none;
+
+.x-menu3:hover .first {
+  height: 0.5rem;
+  width: 0.5rem;
+  transform: skewY(20deg);
+  transform-origin: 50% 30%;
+}
+
+.x-menu3:hover .sec {
+  height: 0.5rem;
+  width: 1rem;
+  transform: skewY(20deg);
+  transform-origin: 50% -30%;
+}
+.x-menu3:hover .thr {
+  height: 0.5rem;
+  width: 1.5rem;
+  transform: skewY(20deg);
+  transform-origin: 50% 20%;
 }
